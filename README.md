@@ -1,38 +1,11 @@
-# Testide koostamise reeglid:
-• Testida tuleb liisingu kuumakse kalkulaatorit;
-
-• Koostada tuleb nii manuaalsed testlood kui ka automaatsed testid. Kui palju teste vaja
-koostada on, on sinu enda otsustada;
-
-• Põhjenda lühidalt, milliste kriteeriumite alusel ja miks sa just antud testide komplektid
-koostasid;
-
-• Manuaalsete testide vormi võid ise valida – oluline on, et testlugudest oleks aru saada, mida
-ja miks sa testinud oled.
-
-• Automaatsete testide tegemiseks võid vahendi (raamistiku) samuti vabalt valida, aga see
-võiks olla Java-põhine. Kasutada võid näiteks Selenide raamistikku (http://selenide.org/).
-Eesmärgiks on teada saada, kas sa ka koodi tasemel teste hallata suudad. Record/playback
-vahendite (näiteks Selenium IDE) kasutamine lubatud ei ole;
-
-
-• Automaatsete testide projekti võiksid saata Giti lingina.
-
-
-//
-- report
-- CI jenkins/github actions
-- tests
-- container
-
-Selenide examples: TODO MVC
+Selenide test examples: leasing calculator
 ================================
 
-This is a sample project demonstrating how to test [TODO MVC application](http://todomvc.com/).
+This project using page: [LHV leasing calculator](https://www.lhv.ee/en/leasing).
 
 **You can checkout and run it locally with a few minutes.**
 
-### How to run with Gradle
+### Run with Gradle
 
 Type from command line to run tests on your machine:
 
@@ -41,3 +14,26 @@ Type from command line to run tests on your machine:
 # or
 ./gradlew test -Dselenide.headless=true
 ```
+
+### Covered by test functionality
+ - Here will add description of reason of selected list
+ - How many tests needed
+ - Which one should be automated
+ - Which points should be checked
+ - Link to manual tests
+#### Manually:
+- One
+- Two
+- Three
+#### Automated:
+- One
+- Two
+- Three
+
+### What could be found in this build
+- Allure Report
+- GitHub actions
+- Gradle, Kotlin-based DSL
+- Selenide 6.8.1
+- Page objects
+- JUnit 5

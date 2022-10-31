@@ -42,5 +42,4 @@ tasks.getByName<Test>("test") {
     testLogging.showExceptions = true
     maxParallelForks = 3
     systemProperties["selenide.headless"] = System.getProperty("selenide.headless")
-    maxHeapSize = "1G"
 }
