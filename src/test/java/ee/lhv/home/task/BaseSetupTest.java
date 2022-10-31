@@ -10,31 +10,27 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.Selenide.open;
 import static java.lang.System.setProperty;
 
 @ExtendWith({TextReportExtension.class})
 public class BaseSetupTest {
 
-    public static final String ET_LANGUAGE = "et";
-    public static final String EN_LANGUAGE = "en";
-    public static final String RU_LANGUAGE = "ru";
-    public static final String ET_LEASING_MONTHLY_PAYMENT = "liising#kalkulaator";
-    public static final String EN_LEASING_MONTHLY_PAYMENT = "leasing#Calculate";
-    public static final String RU_LEASING_MONTHLY_PAYMENT = "lizing#kalkuljator";
+    public static final String ET_LEASING_MONTHLY_PAYMENT = "et/liising#kalkulaator";
+    public static final String EN_LEASING_MONTHLY_PAYMENT = "en/leasing#Calculate";
+    public static final String RU_LEASING_MONTHLY_PAYMENT = "ru/lizing#kalkuljator";
 
     protected static void getBaseUrl() {
         baseUrl = "https://www.lhv.ee/";
     }
 
-    static void openTestApplication(String language) {
-//        getBaseUrl();
-        if (language.equals(ET_LANGUAGE) || language.equals(EN_LANGUAGE)
-                || language.equals(RU_LANGUAGE)) {
-            open("https://www.lhv.ee/"+language+"/");
-        } else {
-            System.err.println("Wrong language selected");
-        }
+    public static void openTestApplication() {
+        getBaseUrl();
+//        if (language.equals(ET_LANGUAGE) || language.equals(EN_LANGUAGE)
+//                || language.equals(RU_LANGUAGE)) {
+//            open("https://www.lhv.ee/"+language+"/");
+//        } else {
+//            System.err.println("Wrong language selected");
+//        }
     }
 
     static void setupAllureReports() {
@@ -49,6 +45,7 @@ public class BaseSetupTest {
     @BeforeAll
     static void init() {
         setupAllureReports();
+        openTestApplication();
         initBrowser();
     }
 

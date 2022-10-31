@@ -14,8 +14,7 @@ public class CalculatorTests  extends BaseSetupTest {
 
     @BeforeAll
     static void setupEETests() {
-        openA(ET_LANGUAGE);
-        open("liising#kalkulaator");
+        open(ET_LEASING_MONTHLY_PAYMENT);
     }
 
     @Test
