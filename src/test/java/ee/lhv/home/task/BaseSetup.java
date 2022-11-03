@@ -42,7 +42,7 @@ public class BaseSetup {
 
     private static void initChromeBrowser() {
         setProperty("selenide.browser", "chrome");
-        Configuration.headless = false;
+        Configuration.headless = true;
     }
 
     @BeforeAll
