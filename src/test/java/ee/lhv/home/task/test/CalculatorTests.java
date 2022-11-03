@@ -15,7 +15,7 @@ public class CalculatorTests  extends BaseSetup {
     @Test
     @Tag("EE")
     @Tag("calculator")
-    @DisplayName("Check private customer with monthly instalment")
+    @DisplayName("Check default private customer and final monthly instalment")
     void checkDefaultCalculationForPrivateCustomer() {
         leasingPage
                 .checkRadioButtonPrivatePersonHaveValueChecked()
@@ -63,7 +63,7 @@ public class CalculatorTests  extends BaseSetup {
     @Test
     @Tag("EE")
     @Tag("calculator")
-    @DisplayName("Check operational lease with price includes VAT and not")
+    @DisplayName("Check operational lease calculation with price includes VAT and not")
     void checkVATCheckboxInOperationalLeaseForPrivateCustomer() {
         leasingPage
                 .clickOnRadioButtonOperationalLease()

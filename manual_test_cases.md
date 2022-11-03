@@ -1,8 +1,41 @@
-Manual test cases: leasing calculator
-================================
+Test cases: leasing calculator
+------------------------------------
+## Theoretical part
+
+Main idea of tests to cover main business logic and main functionality. Additional good to have negative scenario,
+performance and security points.
+
+* Which ones should be automated?
+   * All of tests scenarios, that not over complicated. To make possible check special part.
+That not take more time than manual test, or which one should be run regularly.
+
+Points that should be covered:
+* Check positive scenario
+* Check border values
+* Check negative scenario
+   * Check out of limits values
+   * Check system feedback to unsupported type of data.
+
+## Covered
+
+### Example of Automated tests:
+
+- Check click on apply here button and redirect to leasing application page
+- Check legal customer with selected operational lease and final monthly instalment result
+- Check default private customer and final monthly instalment
+- Check fields size of inputs and using dots and comma in double numbers
+- Check leasing period less than 6 month
+- Check payment schedule list on new page
+- Check operational lease calculation with price includes VAT and not
+- Check warning message for small income
+
+### Example of manual tests:
+
+* Used terms and conditions: https://www.lhv.ee/et/liising#tingimused 
+
 #### Test 1: Check asset minimal value (>7500)
 
-💡 **Tip:** *Could be automated*
+💡 **Tip:** *Should be automated*
 1. Open LHV page
 2. Move leasing calculator
 3. Input into "Price of the vehicle" value=7499 €
@@ -12,7 +45,7 @@ Manual test cases: leasing calculator
 
 #### Test 2: Check  financial amount minimal value (>5000)
 
-💡 **Tip:** *Could be automated*
+💡 **Tip:** *Should be automated*
 1. Open LHV page
 2. Move leasing calculator
 3. Input into "Price of the vehicle" value=7500 €
@@ -48,8 +81,6 @@ Manual test cases: leasing calculator
 
 #### Test 5: Check leasing period for legal person with financial lease flow
 
-*Could be automated*
-
 1. Open LHV page
 2. Move leasing calculator
 3. Select "as a legal person"
@@ -75,7 +106,7 @@ Manual test cases: leasing calculator
 
 #### Test 7: Check calculator with negative input 
 
-💡 **Tip:** *Could be automated*
+💡 **Tip:** *Should be automated*
 1. Open LHV page
 2. Move leasing calculator
 3. Check negative input:
@@ -86,7 +117,7 @@ Manual test cases: leasing calculator
 
 #### Test 8: Check calculator with wrong input text into "Price of the vehicle"
 
-💡 **Tip:** *Could be automated*
+💡 **Tip:** *Should be automated*
 1. Open LHV page
 2. Move leasing calculator
 3. Default values prefilled for "Price of the vehicle", "Downpayment", "Interest", "Residual value"
@@ -95,10 +126,10 @@ Manual test cases: leasing calculator
 
 #### Test 9: Check calculator with wrong input text into "Downpayment" and "Residual value"
 
-💡 **Tip:** *Could be automated*
+💡 **Tip:** *Should be automated*
 1. Open LHV page
 2. Move leasing calculator
-3. Default values prefilled for "Price of the vehicle", "Downpayment", "Interest", "Residual value"
+3. Check default values prefilled for "Price of the vehicle", "Downpayment", "Interest", "Residual value"
 4. Put text input: (example: abc!) 
    * Into "Downpayment" percentage => **Expected** : Calculation not changed, currency value changed to zero.
    * Into "Downpayment" currency value => **Expected** : Calculation not changed, percentage value equal to zero.
@@ -108,9 +139,9 @@ Manual test cases: leasing calculator
 
 #### Test 10: Check calculator with wrong input text into "Interest"
 
-💡 **Tip:** *Could be automated*
+💡 **Tip:** *Should be automated*
 1. Open LHV page
 2. Move leasing calculator
-3. Default values prefilled for "Price of the vehicle", "Downpayment", "Interest", "Residual value"
+3. Check default values prefilled for "Price of the vehicle", "Downpayment", "Interest", "Residual value"
 4. Put text input: (example: abc!)
     * Into "Interest" percentage => **Expected** : Monthly instalment should be zero.

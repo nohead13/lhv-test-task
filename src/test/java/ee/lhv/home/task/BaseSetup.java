@@ -21,7 +21,7 @@ public class BaseSetup {
     protected LeasingPage leasingPage = new LeasingPage();
     public static final String ET_LEASING_MONTHLY_PAYMENT = "/et/liising#kalkulaator";
     /**
-     * Possible to use also other links to en, ru localization
+     * Setup for future use with other localization:
      * public static final String EN_LEASING_MONTHLY_PAYMENT = "/en/leasing#Calculate";
      * public static final String RU_LEASING_MONTHLY_PAYMENT = "/ru/lizing#kalkuljator";
      */
