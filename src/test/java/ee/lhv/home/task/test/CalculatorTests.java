@@ -109,16 +109,4 @@ public class CalculatorTests  extends BaseSetup {
         leasingPage.clickOnApplyHereButtonAndCheckRedirectForEE();
     }
 
-    //possible tests
-    //price from min 7500
-    //amount of taken min 5000
-    //if operational lease from 1m - 6 y
-    //input length check
-    // fieldPriceOfTheVehicle
-    // fieldInitialPercentage
-    // fieldInitial
-    // fieldInterestRate
-    // fieldReminderPercentage
-    // fieldReminder
-    //period 7y
 }
