@@ -1,17 +1,10 @@
 plugins {
-    java
+    `java-library`
     id("io.qameta.allure") version "2.11.2"
 }
 
 repositories {
     mavenCentral()
-}
-
-configurations {
-    implementation {
-        //In case of conflict, Gradle by default uses the newest of conflicting versions.
-        resolutionStrategy.failOnVersionConflict()
-    }
 }
 
 val jUnitvesrion = "5.9.1"
