@@ -103,19 +103,6 @@ public class CalculatorTests  extends BaseSetup {
 
     @Test
     @Tag("EE")
-    @Tag("max-payment")
-    @DisplayName("Check warning message for small income")
-    void checkWarningMessageForSmallIncome() {
-        leasingPage
-                .clickOnMaximumMonthlyInstalmentToggle()
-                .setNetIncomeAndCheck("800")
-                .checkIfWarningMessageForNetIncomeTooSmallVisible(false)
-                .setNetIncomeAndCheck("799")
-                .checkIfWarningMessageForNetIncomeTooSmallVisible(true);
-    }
-
-    @Test
-    @Tag("EE")
     @Tag("calculator")
     @DisplayName("Check click on apply here button and redirect to leasing application page")
     void checkClickApplyApplicationAndRedirect() {

@@ -18,6 +18,8 @@ jobs:
       - uses: browser-actions/setup-chrome@latest
       - name: Run tests in Gradle
         run: ./gradlew clean test --info --rerun-tasks
+      - name: Allure report
+        run: ./gradlew allureReport
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
