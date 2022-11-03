@@ -16,8 +16,8 @@ jobs:
           java-version: '17'
       - name: Run tests in Gradle
         run: ./gradlew clean test -Dselenide.headless=true --info --rerun-tasks
-#      - uses: actions/upload-artifact@v2
-#        if: failure()
-#        with:
-#          name: test-report
-#          path: build/reports/
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: test-report
+          path: build/reports/
