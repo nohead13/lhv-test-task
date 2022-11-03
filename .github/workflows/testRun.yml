@@ -21,7 +21,7 @@ jobs:
       - name: Allure report
         run: ./gradlew allureReport
       - uses: actions/upload-artifact@v2
-        if: failure()
+        if: always()
         with:
           name: test-report
           path: build/reports/
